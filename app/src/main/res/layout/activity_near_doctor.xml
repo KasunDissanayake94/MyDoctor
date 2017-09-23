@@ -40,7 +40,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnHospital"
+        android:id="@+id/B_hopistals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -50,14 +50,14 @@
         android:text="Hospital" />
 
     <Button
-    android:id="@+id/btnPharmacy"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+        android:id="@+id/B_pharmacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/map"
-    android:layout_marginLeft="21dp"
+        android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
-    android:layout_toEndOf="@+id/btnHospital"
-        android:layout_toRightOf="@+id/btnHospital"
+        android:layout_toEndOf="@+id/B_hopistals"
+        android:layout_toRightOf="@+id/B_hopistals"
         android:onClick="onClick"
         android:text="Pharmacy" />
 
