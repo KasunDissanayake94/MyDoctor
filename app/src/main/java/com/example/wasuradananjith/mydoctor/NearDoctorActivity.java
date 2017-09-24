@@ -1,6 +1,7 @@
 package com.example.wasuradananjith.mydoctor;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -62,6 +63,7 @@ public class NearDoctorActivity extends FragmentActivity implements OnMapReadyCa
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
     @Override
@@ -198,7 +200,7 @@ public class NearDoctorActivity extends FragmentActivity implements OnMapReadyCa
                 dataTransfer[1] = url;
 
                 getNearbyPlacesData.execute(dataTransfer);
-                Toast.makeText(NearDoctorActivity.this, "Showing Nearby Schools", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NearDoctorActivity.this, "Showing Nearby Pharmacies", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -262,5 +264,14 @@ public class NearDoctorActivity extends FragmentActivity implements OnMapReadyCa
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        startActivity(new Intent(NearDoctorActivity.this, HomeScreenActivity.class));
+        finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

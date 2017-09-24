@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/btnNearDoc"
+            android:icon="@drawable/locationicon"
+            android:title="Nearby" />
+        <item
+            android:id="@+id/btnVidCall"
+            android:icon="@drawable/cameraicon"
+            android:title="Video Chat" />
+        <item
+            android:id="@+id/btnShort"
+            android:icon="@drawable/road"
+            android:title="Shortest Route" />
+        <item
+            android:id="@+id/btnHelp"
+            android:icon="@drawable/helpicon"
+            android:title="Help" />
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/btnLogOut"
+            android:icon="@drawable/logouticon"
+            android:title="Log Out" />
+    </group>
+
+</menu>

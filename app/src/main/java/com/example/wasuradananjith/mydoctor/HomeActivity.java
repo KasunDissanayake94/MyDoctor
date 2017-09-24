@@ -26,6 +26,15 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        vidCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, VideoActivity.class));
+                overridePendingTransition(R.anim.slide_out_top,R.anim.slide_in_bottom);
+                finish();
+            }
+        });
     }
 
 }

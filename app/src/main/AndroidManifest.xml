@@ -11,7 +11,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <application
         android:allowBackup="true"
@@ -21,11 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -40,8 +36,56 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".Splashscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LoadingHome" />
+        <activity android:name=".LoadingLogin" />
+        <activity android:name=".LoadingRegister" />
+
+        <activity
             android:name=".NearDoctorActivity"
-            android:label="@string/title_activity_near_doctor"></activity>
+            android:label="@string/title_activity_near_doctor" />
+        <activity android:name=".PathActivity" />
+
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_near_doctor" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_near_doctor" />
+
+        <activity
+            android:name=".HomeScreenActivity"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
